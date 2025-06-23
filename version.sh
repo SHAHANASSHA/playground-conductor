@@ -22,7 +22,7 @@ else
   echo "No version bump keyword found. Skipping version tagging."
   exit 0
 fi  
-  
+   
 VERSION=${LAST_TAG#v}
 IFS='.' read -r MAJOR MINOR PATCH <<< "$VERSION"
 
