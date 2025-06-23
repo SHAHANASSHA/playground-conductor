@@ -11,7 +11,7 @@ echo "Commits since $LAST_TAG:"
 echo "$COMMITS"
 
 BUMP="patch" 
-
+ 
 if echo "$COMMITS" | grep -qE "^major:"; then
   BUMP="major" 
 elif echo "$COMMITS" | grep -qE "^minor:"; then
