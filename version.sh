@@ -10,7 +10,7 @@ COMMITS=$(git log ${LAST_TAG}..HEAD --pretty=format:"%s%n%b" 2>/dev/null || git 
 echo "Commits since $LAST_TAG:"
 echo "$COMMITS"
 
-BUMP="patch" 
+BUMP="patch"  
  
 if echo "$COMMITS" | grep -qE "^major:"; then
   BUMP="major" 
