@@ -6,7 +6,9 @@
 
 go build .
 
-mkdir -p usr/local/bin
+sudo systemctl stop conductor || true
+
+mkdir -p /usr/local/bin
 
 cp ./conductor /usr/local/bin/conductor
 
