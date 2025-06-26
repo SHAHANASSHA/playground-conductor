@@ -6,11 +6,11 @@
 
 go build .
 
-mkdir -p ~/bin
+mkdir -p usr/local/bin
 
-cp ./conductor ~/bin/conductor
+cp ./conductor /usr/local/bin/conductor
 
-chmod +x ~/bin/conductor
+chmod +x /usr/local/bin/conductor
 
 mkdir -p ~/.config/systemd/user
 
