@@ -6,22 +6,20 @@
 
 go build .
 
-sudo systemctl stop conductor || true
+mkdir -p ~/bin
 
-mkdir -p /usr/local/bin
+cp ./conductor ~/bin/conductor
 
-cp ./conductor /usr/local/bin/conductor
-
-chmod +x /usr/local/bin/conductor
+chmod +x ~/bin/conductor
 
 mkdir -p ~/.config/systemd/user
 
 service="[Unit]
 Description=Conductor Service
-After=network.target redis.service
+After=network.target
 
 [Service]
-ExecStart=/usr/local/bin/conductor
+ExecStart=/home/$(whoami)/bin/conductor
 Restart=always
 Environment=PDNS_KEY=a7eadf75278dd026e54c24d3aeff992cd5a8fc19
 
