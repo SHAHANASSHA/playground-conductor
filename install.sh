@@ -16,7 +16,7 @@ mkdir -p ~/.config/systemd/user
 
 service="[Unit]
 Description=Conductor Service
-After=network.target
+After=network.target redis.service
 
 [Service]
 ExecStart=/home/$(whoami)/bin/conductor
