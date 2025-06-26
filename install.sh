@@ -19,7 +19,7 @@ Description=Conductor Service
 After=network.target redis.service
 
 [Service]
-ExecStart=/home/$(whoami)/bin/conductor
+ExecStart=/usr/local/bin/conductor
 Restart=always
 Environment=PDNS_KEY=a7eadf75278dd026e54c24d3aeff992cd5a8fc19
 
